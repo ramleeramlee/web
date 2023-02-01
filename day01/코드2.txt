@@ -1,0 +1,1 @@
+<a href="/day02/page1.html">day02/page1.html로 가보자.</a> <br>
