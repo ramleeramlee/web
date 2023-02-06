@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery UI Accordion - Default functionality</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $(function () {
+        //b1을 클릭했을 때 오른쪽에 있는 함수 내용을 실행해주세요!
+        $("#b1").click(function() {
+            alert('영화정보 클릭함')
+            $.ajax({
+                url: "movie.html",
+                success : function (x) {
+                    $("#d1").html(x)
+                }
+            })
+        }) //b1
+      $("#b2").click(function() {
+            alert('코로나정보 클릭함')
+            $.ajax({
+                url: "코로나.html",
+                success : function (x) {
+                    $("#d2").html(x)
+                }
+            })
+        })
+      
+      $("#b3").click(function() {
+            alert('교통정보 클릭함')
+            $.ajax({
+                url: "교통정보.html",
+                success : function (x) {
+                    $("#d3").html(x)
+                }
+            })
+        })
+    }); 
+    </script>
+  </head>
+  <body>
+    <button id="b1">영화정보 받아오기</button>
+    <button id="b2">코로나정보 받아오기</button>
+    <button id="b3">교통정보 받아오기</button>
+    <hr>
+    <div id="d1" style="width: 200px; height: 100px; background: white;"></div>
+    <div id="d2" style="width: 200px; height: 100px; background: pink;"></div>
+    <div id="d3" style="width: 200px; height: 100px; background: skyblue;"></div>
+  </body>
+</html>
